@@ -1,7 +1,5 @@
 import fetch from 'isomorphic-unfetch'
 
-const postSchema = new schema.Entity('posts')
-
 export default {
   state: {
     posts: {}
@@ -21,8 +19,7 @@ export default {
       const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
       const res = await fetch(`${baseUrl}/api/post`)
       const data = await res.json()
-      const { entities } = normalize(data, { posts: [postSchema] })
-      this.savePosts(entities.posts)
+      this.savePosts(data)
     }
   })
 }
