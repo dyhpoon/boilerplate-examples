@@ -1,5 +1,4 @@
 import fetch from 'isomorphic-unfetch'
-import { normalize, schema } from 'normalizr'
 
 const postSchema = new schema.Entity('posts')
 
