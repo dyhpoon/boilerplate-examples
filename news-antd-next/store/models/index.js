@@ -1,9 +1,5 @@
-import counter from './counter'
-import github from './github'
-import post from './post'
+import story from './story'
 
 export {
-  post,
-  counter,
-  github
+  story,
 }
