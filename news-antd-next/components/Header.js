@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components'
 import _Logo from './Logo'
+import Link from 'next/link'
 
 const TopBar = styled.header`
   display: flex;
   background-color: #FFA444;
   font-size: 14px;
+  align-items: center;
 `
 
 const Left = styled.div`
@@ -18,17 +20,22 @@ const Right = styled.div`
 `
 
 const Logo = styled(_Logo)`
-  margin: 4px 5px 2px 4px;
+  margin: 2px 4px;
 `
 
 const Title = styled.span`
   font-weight: bold;
   padding: 8px 4px 8px 4px;
   display: inline-block;
+  color: #000;
 `
 
-const Login = styled.div`
+const Login = styled.a`
   text-transform: uppercase;
+  display: inline-block;
+  padding-right: 10px;
+  font-weight: bold;
+  font-size: 11px;
 `
 
 const Header = () => {
@@ -36,10 +43,12 @@ const Header = () => {
     <TopBar>
       <Left>
         <Logo />
-        <Title>Hacker Next</Title>
+        <Title>Hacker News</Title>
       </Left>
       <Right>
-        <Login>login</Login>
+        <Link prefetch href="/login">
+          <Login>login</Login>
+        </Link>
       </Right>
     </TopBar>
   );
