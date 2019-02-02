@@ -1,6 +1,6 @@
 import fetchData from '../../utils/fetchData'
 
-const PAGE_SIZE = 30
+const PAGE_SIZE = 5
 
 export default {
   state: {

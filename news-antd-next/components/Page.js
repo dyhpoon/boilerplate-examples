@@ -3,8 +3,12 @@ import styled, { createGlobalStyle } from 'styled-components'
 import Header from './Header'
 
 const Global = createGlobalStyle`
-  html {
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+  }
+  html {
     font-size: 16px;
   }
 `
@@ -12,7 +16,7 @@ const Global = createGlobalStyle`
 const Layout = styled.div`
   width: 85%;
   margin: auto;
-  @media (max-width: 750) {
+  @media (max-width: 750px) {
     padding: 0;
     width: auto;
   }
@@ -23,8 +27,8 @@ class Page extends Component {
     return (
       <>
         <Global />
+        <Header />
         <Layout>
-          <Header />
           {this.props.children}
         </Layout>
       </>
