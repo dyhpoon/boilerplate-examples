@@ -28,6 +28,7 @@ const Title = styled.span`
   padding: 8px 4px 8px 4px;
   display: inline-block;
   color: #000;
+  user-select: none;
 `
 
 const Login = styled.a`
@@ -36,6 +37,11 @@ const Login = styled.a`
   padding-right: 10px;
   font-weight: bold;
   font-size: 11px;
+  text-decoration: none;
+  color: #000;
+  :hover {
+    color: #fff;
+  }
 `
 
 const Header = () => {
@@ -46,7 +52,7 @@ const Header = () => {
         <Title>Hacker News</Title>
       </Left>
       <Right>
-        <Link prefetch href="/login">
+        <Link prefetch href="/" passHref>
           <Login>login</Login>
         </Link>
       </Right>

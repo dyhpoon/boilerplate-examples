@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const Logo = styled.span`
   border: 1px solid #fff;
@@ -11,5 +12,7 @@ const Logo = styled.span`
 `
 
 export default ({ className }) => (
-  <Logo className={className}>N</Logo>
+  <Link href="/" passHref>
+    <a><Logo className={className}>N</Logo></a>
+  </Link>
 );

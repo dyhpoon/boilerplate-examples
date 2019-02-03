@@ -1,8 +1,13 @@
 import React from 'react';
 import _Story from './Story'
 import styled from 'styled-components'
+import { PAGE_SIZE } from '../store/models/story'
 
-const Box = styled.div`
+const Wrapper = styled.div`
+  padding: 10px 0;
+`
+
+const Item = styled.div`
   display: flex;
   align-items: center;
   padding: 5px 15px;
@@ -19,7 +24,7 @@ const Story = styled(_Story)`
 
 const Stories = ({ stories, page = 1 }) => {
   return (
-    <div>
+    <Wrapper>
       { stories.map((story, i) => {
         const attributes = {
           id: story.id,
@@ -31,13 +36,13 @@ const Stories = ({ stories, page = 1 }) => {
           commentsCount: story.descendants,
         }
         return (
-          <Box key={story.id}>
-            <Index>{i + 1}.</Index>
+          <Item key={story.id}>
+            <Index>{ ((page - 1) * PAGE_SIZE ) + i + 1 }.</Index>
             <Story {...attributes} />
-          </Box>
+          </Item>
         )
       }) }
-    </div>
+    </Wrapper>
   );
 };
 
