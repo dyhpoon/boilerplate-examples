@@ -10,14 +10,16 @@ const Global = createGlobalStyle`
   }
   html {
     font-size: 16px;
+    background: #eee;
   }
 `
 
 const Layout = styled.div`
   width: 85%;
-  margin: auto;
+  margin: 10px auto auto auto;
+  background: #fff;
   @media (max-width: 750px) {
-    padding: 0;
+    margin: 0;
     width: auto;
   }
 `
@@ -27,8 +29,8 @@ class Page extends Component {
     return (
       <>
         <Global />
-        <Header />
         <Layout>
+          <Header />
           {this.props.children}
         </Layout>
       </>

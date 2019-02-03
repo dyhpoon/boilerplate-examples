@@ -1,5 +1,21 @@
 import React from 'react';
-import Story from './Story'
+import _Story from './Story'
+import styled from 'styled-components'
+
+const Box = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+`
+
+const Index = styled.span`
+  align-self: flex-start;
+  color: #949494;
+`
+
+const Story = styled(_Story)`
+  display: inline-block;
+`
 
 const Stories = ({ stories, page = 1 }) => {
   return (
@@ -15,9 +31,10 @@ const Stories = ({ stories, page = 1 }) => {
           commentsCount: story.descendants,
         }
         return (
-          <div className="story" key={story.id}>
+          <Box key={story.id}>
+            <Index>{i + 1}.</Index>
             <Story {...attributes} />
-          </div>
+          </Box>
         )
       }) }
     </div>

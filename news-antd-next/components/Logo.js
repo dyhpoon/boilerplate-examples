@@ -7,7 +7,7 @@ const Logo = styled.span`
   font-weight: bold;
   font-size: 11px;
   padding: 5px 8px;
-  color: #fff;
+  color: ${props => props.color ? props.color : '#fff'};
 `
 
 export default ({ className }) => (
