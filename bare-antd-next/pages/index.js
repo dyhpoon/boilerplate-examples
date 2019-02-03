@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { dispatch } from '@rematch/core'
 import { initStore } from '../store'
 import withRematch from '../utils/withRematch'
+import Page from '../components/Page'
 
 class Home extends Component {
   render () {
     return (
-      <div>
+      <Page>
         <h1> Counter </h1>
         <h3>The count is {this.props.counter}</h3>
         <p>
@@ -18,7 +19,7 @@ class Home extends Component {
           <button onClick={this.props.incrementAsync}>incrementAsync</button>
         </p>
         <br />
-      </div>
+      </Page>
     )
   }
 }
