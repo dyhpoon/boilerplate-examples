@@ -1,0 +1,22 @@
+{
+  "name": "@rest-egg/api",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "egg": "^2.0.0",
+    "moment": "^2.19.2"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "egg-mock": "^3.13.1",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "scripts": {
+    "dev": "egg-bin dev",
+    "test": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  }
+}
