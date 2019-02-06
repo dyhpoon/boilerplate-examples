@@ -3,6 +3,8 @@
 module.exports = appInfo => {
   const config = {};
 
+  config.middleware = ['healthcheck']
+
   // should change to your own
   config.keys = appInfo.name + '123456';
 
