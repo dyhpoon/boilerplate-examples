@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "egg-bin": "^4.10.0",
     "egg-mock": "^3.13.1",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0"
