@@ -1,7 +1,6 @@
 MAKEFLAGS = -j1
 
 export NODE_ENV = test
-export EGG_SERVER_ENV = unittest
 export FORCE_COLOR = true
 
 .PHONY: eslint-lint prettier-lint lint clean-packages clean clean-test test changelog

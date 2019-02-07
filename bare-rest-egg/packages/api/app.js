@@ -1,5 +1,5 @@
 module.exports = app => {
-  if (process.env.EGG_SERVER_ENV != 'unittest') {
+  if (process.env.NODE_ENV != 'test') {
     app.config.coreMiddleware.unshift('morgan')
   }
 

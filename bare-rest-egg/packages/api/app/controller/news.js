@@ -12,7 +12,7 @@ class NewsController extends Controller {
 
     // get itemInfo parallel
     const newsList = await Promise.all(idList.map(id => ctx.service.hackerNews.getItem(id)));
-    await ctx.render('news/list.tpl', { list: newsList, page, pageSize });
+    ctx.body = newsList
   }
 }
 
