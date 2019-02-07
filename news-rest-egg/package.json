@@ -1,0 +1,20 @@
+{
+  "name": "rest-egg",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "install": "lerna bootstrap",
+    "clean": "make clean",
+    "start": "cd packages/api && EGG_SERVER_ENV=prod egg-scripts start",
+    "cov": "cd packages/api && EGG_SERVER_ENV=unittest egg-bin cov",
+    "dev": "egg-bin dev --baseDir packages/api",
+    "test": "make test"
+  },
+  "dependencies": {
+    "egg-scripts": "^2.11.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.10.0",
+    "lerna": "^3.10.7"
+  }
+}
