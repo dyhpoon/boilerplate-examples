@@ -21,6 +21,7 @@ clean-packages:
 	rm -rf packages/*/*.log
 
 clean:
+	rm -rf node_modules
 	make clean-packages
 
 clean-test:

@@ -11,5 +11,16 @@ module.exports = appInfo => {
     serverUrl: 'https://hacker-news.firebaseio.com/v0',
   };
 
+  config.security = {
+    csrf: {
+      enable: false
+    }
+  }
+
+  config.cors = {
+    origin: '*',
+    allowedMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  }
+
   return config;
 };

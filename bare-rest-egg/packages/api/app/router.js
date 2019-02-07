@@ -3,7 +3,9 @@
 module.exports = app => {
   const { router, controller } = app;
   
-  router.get('/news', controller.news.list);
+  router.get('/count', controller.count.get)
+  router.post('/count', controller.count.increment)
+  router.delete('/count', controller.count.decrement)
 
   // these endpoints are only available in non-production mode
   // the purpose is to make sure all kinds of errors are handled properly

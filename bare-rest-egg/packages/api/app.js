@@ -5,4 +5,6 @@ module.exports = app => {
 
   app.config.coreMiddleware.unshift('healthcheck')
   app.config.coreMiddleware.unshift('errorHandler')
+
+  app.counter = 0
 }
