@@ -1,3 +1,5 @@
+'use strict'
+
 const healthcheck = require('koa-simple-healthcheck')
 
 module.exports = (options) => {

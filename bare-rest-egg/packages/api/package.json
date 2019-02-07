@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@rest-egg/errors": "^1.0.0",
     "egg": "^2.0.0",
     "koa-morgan": "^1.0.1",
     "koa-simple-healthcheck": "^0.0.1",

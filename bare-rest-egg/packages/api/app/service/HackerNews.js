@@ -57,15 +57,6 @@ class HackerNews extends Service {
   async getItem(id) {
     return this.request(`item/${id}.json`);
   }
-
-  /**
-   * get user info
-   * @param {Number} id - userId
-   * @return {Promise} user info
-   */
-  async getUser(id) {
-    return this.request(`user/${id}.json`);
-  }
 }
 
 module.exports = HackerNews;

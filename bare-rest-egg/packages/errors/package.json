@@ -1,0 +1,16 @@
+{
+  "name": "@rest-egg/errors",
+  "version": "1.0.0",
+  "private": true,
+  "main": "lib/index.js",
+  "files": [
+    "lib/**/*.js"
+  ],
+  "scripts": {
+    "test": "egg-bin test",
+    "cov": "egg-bin cov"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.10.0"
+  }
+}

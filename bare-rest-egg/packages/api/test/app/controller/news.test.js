@@ -21,18 +21,4 @@ describe('test/app/controller/news.test.js', () => {
     const listItem = $('.news-view .item');
     assert(listItem.length === app.config.news.pageSize);
   });
-
-  it('should GET /news/item/:id', async () => {
-    await app.httpRequest()
-      .get('/news/item/1')
-      .expect(/\/news\/item\/1/) // just a example, use regex to test part of dom string, but should be strong characteristic
-      .expect(200);
-  });
-
-  it('should GET /news/user/:id', async () => {
-    await app.httpRequest()
-      .get('/news/user/activatedgeek')
-      .expect(/<span class="label">user:<\/span> activatedgeek/) // just a example, use regex to test part of dom string, but should be strong characteristic
-      .expect(200);
-  });
 });

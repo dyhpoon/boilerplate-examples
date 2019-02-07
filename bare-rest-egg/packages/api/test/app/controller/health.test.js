@@ -1,6 +1,8 @@
+'use strict'
+
 const { mock, assert } = require('egg-mock/bootstrap')
 
-describe('test/app.controller/health.test.js', () => {
+describe('test/app/controller/health.test.js', () => {
   let app
 
   before(async () => {
