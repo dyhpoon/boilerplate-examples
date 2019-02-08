@@ -1,4 +1,6 @@
 const express = require('express')
+const morgan = require('morgan')
+const healthcheck = require('express-healthcheck')
 const next = require('next')
 
 const port = parseInt(process.env.PORT, 10) || 3000
@@ -8,6 +10,8 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   const server = express()
+  !dev && server.use(morgan('short'))
+  server.use('/healthcheck', healthcheck())
 
   server.get('*', (req, res) => {
     return handle(req, res)
