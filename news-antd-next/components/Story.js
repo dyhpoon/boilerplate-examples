@@ -42,7 +42,7 @@ const Story = ({ id, title, date, url, user, score, commentsCount, className }) 
     <Box className={className}>
       <Title>
         { url ? <URL href={url}>{title}</URL> : <URL>{title}</URL> }
-        { <Source href={url}>{parsedHost}</Source> }
+        { url ? <Source href={url}>{parsedHost}</Source> : "" }
       </Title>
       <div>
         <Text>{score} points by </Text>
