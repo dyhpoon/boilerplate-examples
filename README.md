@@ -5,7 +5,7 @@
 # useful tips
 ```bash
 curl -H 'accept: application/json' -X POST http://localhost:7001
-curl -d '{"name":"bob"}' -H 'accept: application/json' -X POST http://localhost:7001
+curl -d '{"name":"bob"}' -H 'accept: application/json' -H 'Content-Type: application/json' -X POST http://localhost:7001
 curl -d '{"name":"bob"}' -H 'Content-Type: application/json' http://example.com/users/1234
 ```
 
