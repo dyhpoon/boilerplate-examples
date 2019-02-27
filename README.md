@@ -45,3 +45,33 @@ class PostController extends Controller {
   }
 }
 ```
+
+test tips
+```js
+await app
+  .httpRequest()
+  .post(`/api/v1/orgs/${fakeOrg.id}/invoices`)
+  .set('Accept', 'application/json')
+  .send({
+    title: '',
+    description: '',
+    currency: 'USD',
+    invoiceItems: [
+      {
+        name: 'test invoice item',
+        price: (Math.random() * 100) >> 0,
+        quantity: 1,
+      },
+    ],
+    dueDate: yesterdayTimestamp,
+    profileIds: [fakeProfile.id],
+  })
+  .expect(400)
+  .expect({
+    status: 400,
+    short_message: 'INVALID_USER_INPUT',
+    long_messages: [
+      `Invalid value: ${yesterdayTimestamp} supplied to query: invoices.CreateOrgInvoice, name: dueDate.`,
+    ],
+  })
+```
