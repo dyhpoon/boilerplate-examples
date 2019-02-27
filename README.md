@@ -3,10 +3,14 @@
 > A collection of example projects for quick prototype
 
 # useful tips
+```bash
+curl -H 'accept: application/json' -X POST http://localhost:7001
+curl -d '{"name":"bob"}' -H 'accept: application/json' -X POST http://localhost:7001
 curl -d '{"name":"bob"}' -H 'Content-Type: application/json' http://example.com/users/1234
+```
 
 # controller tips
-```
+```js
 // /posts?category=egg&language=node
 class PostController extends Controller {
   async listPosts() {
@@ -18,7 +22,7 @@ class PostController extends Controller {
   }
 }
 ```
-```
+```js
 // app.get('/projects/:projectId/app/:appId', 'app.listApp');
 // GET /projects/1/app/2
 class AppController extends Controller {
@@ -28,7 +32,7 @@ class AppController extends Controller {
   }
 }
 ```
-```
+```js
 // POST /api/posts HTTP/1.1
 // Host: localhost:3000
 // Content-Type: application/json; charset=UTF-8
