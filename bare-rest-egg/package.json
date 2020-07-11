@@ -11,10 +11,10 @@
     "test": "make test"
   },
   "dependencies": {
-    "egg-scripts": "^2.11.0"
+    "egg-scripts": "^2.13.0"
   },
   "devDependencies": {
-    "egg-bin": "^4.10.0",
-    "lerna": "^3.10.7"
+    "egg-bin": "^4.15.0",
+    "lerna": "^3.22.1"
   }
 }
