@@ -9,7 +9,7 @@
   "dependencies": {
     "@rematch/core": "^1.4.0",
     "@zeit/next-css": "^1.0.1",
-    "antd": "^3.9.2",
+    "antd": "^4.4.2",
     "babel-plugin-import": "^1.13.0",
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
