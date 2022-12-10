@@ -12,7 +12,7 @@
     "antd": "^3.9.2",
     "babel-plugin-import": "^1.9.1",
     "chart.js": "^2.7.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-healthcheck": "^0.1.0",
     "isomorphic-unfetch": "^3.0.0",
     "moment": "^2.24.0",
